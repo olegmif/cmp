@@ -159,16 +159,12 @@ const BtnComponent: FC<BtnComponentProps> = forwardRef(
 					sx={sx}
 				>
 					{LeftIcon && (
-						<StyledIcon $stylesString={iconStylesString} className="icon">
-							{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-							{/* @ts-ignore */}
+						<StyledIcon $stylesString={iconStylesString} className="icon">							
 							<LeftIcon size="medium" />
 						</StyledIcon>
 					)}
 					{LeftIconNode && (
-						<StyledIcon $stylesString={iconStylesString} className="icon">
-							{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-							{/* @ts-ignore */}
+						<StyledIcon $stylesString={iconStylesString} className="icon">							
 							{LeftIconNode}
 						</StyledIcon>
 					)}
@@ -187,9 +183,7 @@ const BtnComponent: FC<BtnComponentProps> = forwardRef(
 						<StyledIcon
 							$stylesString={iconStylesString}
 							className={cn('icon', 'right-icon')}
-						>
-							{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-							{/* @ts-ignore */}
+						>							
 							<RightIcon size="medium" />
 						</StyledIcon>
 					)}
@@ -197,9 +191,7 @@ const BtnComponent: FC<BtnComponentProps> = forwardRef(
 						<StyledIcon
 							$stylesString={iconStylesString}
 							className={cn('icon', 'right-icon')}
-						>
-							{/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-							{/* @ts-ignore */}
+						>							
 							{RightIconNode}
 						</StyledIcon>
 					)}
