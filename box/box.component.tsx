@@ -145,36 +145,7 @@ const BoxComponent: FC<BoxComponentProps> = React.forwardRef(
 	) => {
 		const defaultTheme: TTheme = useContext(ThemeContext);
 
-		/*
-		const mediaQueriesString = useMemo(() => {
-			if (!sx) {
-				return '';
-			}
-			return BREAKPOINT_NAMES.reduce<Array<string>>((acc, breakpoint) => {
-				if ((sx as MediaSx)[breakpoint]) {
-					const mediaValues = stringifySx(
-						calcBoxCxProps(
-							theme || defaultTheme,
-							(sx as MediaSx)[breakpoint] as Sx
-						)
-					);
-					const mediaQuery = `@media screen and (min-width: ${BREAKPOINTS[breakpoint].min}px) {${mediaValues}}`;
-					acc.push(mediaQuery);
-				}
-				return acc;
-			}, []).join('');
-		}, [sx as MediaSx]);
-		 */
-
-		/*
-		const boxStyles = useMemo(() => {
-			const defaultSx = sx ? extractSx(sx) : {};
-			const p = defaultSx.p || DEFAULT_PADDING;
-			return stringifySx(
-				calcBoxCxProps(theme || defaultTheme, { p, ...defaultSx })
-			);
-		}, [sx]);
-		 */
+		
 		const boxStyles = useMemo(
 			() => getBoxStyles(theme || defaultTheme, sx),
 			[sx]
